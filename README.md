@@ -28,10 +28,31 @@ var weight = 1232
 - `listOf` - immutable list (can't add)
 
 ```
-val names = mutableListOf<String>("Farhan", "Tanvir", "Utshaw")
-for(name in names) {
-    println(name)
+val imperials = listOf<String>("Emperor", "Darth Vader", "Tarkin")
+println(imperials.sorted()) // [Darth Vader, Emperor, Tarkin]
+println(imperials[2]) // Tarkin
+println(imperials.contains("Emperor")) // true
+
+for(imperial in imperials) {
+    println(imperial)
 }
+```
+
+```
+val imperials = mutableListOf<String>("Emperor", "Darth Vader", "Tarkin")
+println(imperials.sorted()) // [Darth Vader, Emperor, Tarkin]
+println(imperials[2]) // Tarkin
+println(imperials.contains("Emperor")) // true
+
+for(imperial in imperials) {
+    println(imperial)
+}
+
+imperials.add(0, "Snoke")
+println(imperials.size) // 4
+println(imperials.indexOf("Tarkin")) // 3
+
+imperials.remove("Tarkin")
 ```
 
 ## for loop
