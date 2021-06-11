@@ -80,3 +80,23 @@ val rawCrawl = """
 ```
 println(person.contentEquals("Farhan Tanvird"))
 ```
+
+## string contains
+
+```
+println(person.contains("Tanvir"))
+```
+
+## string contains ignore case
+
+```
+println(person.contains("Tanvir", true))
+```
+
+## toString()
+
+```
+val intNum : Int = 12
+    val strNum : String = intNum.toString()
+    println(strNum)
+```
