@@ -1,12 +1,12 @@
 
-fun foo() {
-    print("This is some line")
+fun foo(name: String): Int {
+    print("Hello $name")
+    return 100
 }
 
 
 fun main(args: Array<String>) {
-    val number1 = readLine() ?: "0"
-    val number2 = readLine() ?: "0"
-    val result = number1.toInt()  + number2.toInt()
-    print(result)
+    val someVal = "some"
+    someVal?.toUpperCase() // call toUpperCase only if not null
+
 }
