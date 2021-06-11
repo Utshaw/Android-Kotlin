@@ -55,6 +55,19 @@ println(imperials.indexOf("Tarkin")) // 3
 imperials.remove("Tarkin")
 ```
 
+## hashmap
+
+```
+val rebelVehicles = hashMapOf<String, String>("Solo" to "Millenium Falcon" , "Boba" to "Rocket Pack")
+
+println(rebelVehicles.get("Solo"))
+println(rebelVehicles["Solo"])
+println(rebelVehicles.getOrDefault("Luke", "This shop doesn't exist"))
+rebelVehicles["Luke"] = "XWing"
+println(rebelVehicles.values)
+rebelVehicles.remove("Boba")
+```
+
 ## for loop
 
 ```
