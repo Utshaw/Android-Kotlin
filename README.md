@@ -74,3 +74,9 @@ val rawCrawl = """
         newline sentence
 """.trimIndent()
 ```
+
+## string equality
+
+```
+println(person.contentEquals("Farhan Tanvird"))
+```
