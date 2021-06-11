@@ -1,6 +1,7 @@
 # Kotlin
 
 - Language Tutorial: [Learn Kotlin in 12 Minutes - 2021](https://youtu.be/iYrgWO2oibY)
+- [Kotlin Tutorial For Beginners [Full Course] Learn Kotlin For Android Developments](https://youtu.be/SXLmr4Qp4OM)
 
 ## [How Kotlin works in android](https://stackoverflow.com/questions/47153013/how-does-kotlin-code-get-executed-in-an-android-application-and-how-is-it-diffe)
 
