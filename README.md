@@ -113,3 +113,15 @@ fun main() {
 
 }
 ```
+
+## when
+
+```
+val x: Int = 1
+
+when(x) {
+    1-> print("x is 1")
+    2-> print("x is 2")
+    else -> print("x is not equal 1 or 2")
+}
+```
