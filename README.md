@@ -100,3 +100,16 @@ val intNum : Int = 12
     val strNum : String = intNum.toString()
     println(strNum)
 ```
+
+## inline calculation
+
+```
+fun calculateNumberOfGoodGuys(teamA: Int, teamB: Int) : Int {
+    return teamA + teamB
+}
+fun main() {
+
+    print("Enemy team faced off agains ${calculateNumberOfGoodGuys(150, 10)} revel scum")
+
+}
+```
