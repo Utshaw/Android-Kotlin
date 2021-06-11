@@ -207,6 +207,35 @@ else -> print("x is not equal 1 or 2")
 
 ```
 
+## OOP
+
 ```
+open class Car constructor(private val make: String, private val model: String) {
+    override fun toString(): String {
+        return "Car(make='$make', model='$model')"
+    }
+    fun accelerate() {
+        println("Vroom vroom....")
+    }
+    open fun details() {
+        println("Car made by $make in $model")
+    }
+}
+
+class Truck constructor(private val make: String, private val model: String, private val towinCapacity: Int) : Car(make, model) {
+    fun tow() {
+        println("taking the horses to the rodeo")
+    }
+    override fun details() {
+        println("Truck made by $make in $model with towing capacity $towinCapacity")
+    }
+}
+
+fun main() {
+    val car =  Car("Toyota", "2021")
+    val truck = Truck("Ford", "1992", 2300)
+    println(truck)
+    truck.accelerate()
+}
 
 ```
