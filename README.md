@@ -68,95 +68,145 @@ println(rebelVehicles.values)
 rebelVehicles.remove("Boba")
 ```
 
+## loop
+
+```
+val persons = listOf<String>("Farhan", "Tanvir", "Utshaw")
+for(person in persons) {
+    println("Name $person")
+}
+
+val marksheet = hashMapOf<String, Int>("Farhan" to 100, "Tanvir" to 200, "Utshaw" to 300)
+for((key, value) in marksheet) {
+    println("$key -> $value")
+}
+```
+
 ## for loop
 
 ```
+
 for(i in 1..5) {
-    println(i)
+println(i)
 }
+
 ```
 
 ## function
 
 ```
+
 fun foo(name: String): Int {
-    print("Hello $name")
-    return 100
+print("Hello $name")
+return 100
 }
+
 ```
 
 ## `?.` operator
 
 ```
-val someVal = "some"
-someVal?.toUpperCase() // call toUpperCase only if not null
+
+var sampleString: String? = "This is a sample string"
+println(sampleString) // This is a sample string
+sampleString = null
+
+println(sampleString?.length) // null
+
+println(sampleString?.length == null) // true
+
+
+val len = sampleString?.length ?: -1
+println(len)
+
+
 ```
 
 ## variable type
 
 ```
+
 val doubleNum : Double = 12.33
 val floatNum : Float = 12.33f
 val longNum : Long = 12233L
 val aDouble = doubleNum.toString()
+
 ```
 
 ## multiline string
 
 ```
+
 val rawCrawl = """
-        This is some long long
-        newline sentence
+This is some long long
+newline sentence
 """.trimIndent()
+
 ```
 
 ## string equality
 
 ```
+
 println(person.contentEquals("Farhan Tanvird"))
+
 ```
 
 ## string contains
 
 ```
+
 println(person.contains("Tanvir"))
+
 ```
 
 ## string contains ignore case
 
 ```
+
 println(person.contains("Tanvir", true))
+
 ```
 
 ## toString()
 
 ```
+
 val intNum : Int = 12
-    val strNum : String = intNum.toString()
-    println(strNum)
+val strNum : String = intNum.toString()
+println(strNum)
+
 ```
 
 ## inline calculation
 
 ```
+
 fun calculateNumberOfGoodGuys(teamA: Int, teamB: Int) : Int {
-    return teamA + teamB
+return teamA + teamB
 }
 fun main() {
 
     print("Enemy team faced off agains ${calculateNumberOfGoodGuys(150, 10)} revel scum")
 
 }
+
 ```
 
 ## when
 
 ```
+
 val x: Int = 1
 
 when(x) {
-    1-> print("x is 1")
-    2-> print("x is 2")
-    else -> print("x is not equal 1 or 2")
+1-> print("x is 1")
+2-> print("x is 2")
+else -> print("x is not equal 1 or 2")
 }
+
+```
+
+```
+
 ```
