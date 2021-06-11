@@ -57,7 +57,7 @@ val someVal = "some"
 someVal?.toUpperCase() // call toUpperCase only if not null
 ```
 
-## type inference
+## variable type
 
 ```
 val doubleNum : Double = 12.33
