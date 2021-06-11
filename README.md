@@ -64,4 +64,8 @@ val doubleNum : Double = 12.33
 val floatNum : Float = 12.33f
 val longNum : Long = 12233L
 val aDouble = doubleNum.toString()
+val rawCrawl = """
+        This is some long long
+        newline sentence
+    """.trimIndent()
 ```
