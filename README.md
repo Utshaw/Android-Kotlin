@@ -1,5 +1,6 @@
 # Kotlin
 
+- [Kotlin Tutorial](https://youtu.be/G6oVG5XetnE?list=PLlxmoA0rQ-LwgK1JsnMsakYNACYGa1cjR)
 - Language Tutorial: [Learn Kotlin in 12 Minutes - 2021](https://youtu.be/iYrgWO2oibY)
 - [Kotlin Tutorial For Beginners [Full Course] Learn Kotlin For Android Developments](https://youtu.be/SXLmr4Qp4OM)
 
@@ -10,15 +11,37 @@
 - When the `.apk` file is installed on device ART converts Dalvik bytecode and converts that into machine code
 - The machine code is executed
 
+## Open Kotlin project in intellij
+
+- Create new project
+- Select Kotlin from left navigation
+- Select Kotlin JVM from middle-top section
+
+## type inference
+
+- Kotlin infers type at compile time & it gets fixed
+
+## can be null
+
+- kotlin doesn't allow null
+
+```
+val i: Int = null // not ok
+val i: Int? = null // not ok
+```
+
 ## Variable
 
 - every variable must have a type (statically type)
-- `val` : readonly
+- val will allow assignment once
+- `val` : readonly, can't point to other
 - `var` : read & write permission, can be changed
 
 ```
 val firstname: String = "Rahul"
 var weight = 1232
+weight = 12 // ok
+firstname = "A" // not ok
 
 ```
 
@@ -103,7 +126,11 @@ return 100
 
 ```
 
-## `?.` operator
+<img src="img/1.png">
+
+## `?.` safe-call operator
+
+- stops execution of the method if called on null object, returns null in that case
 
 ```
 
@@ -117,10 +144,32 @@ println(sampleString?.length == null) // true
 
 
 val len = sampleString?.length ?: -1
-println(len)
+println(len) // -1
 
 
 ```
+
+## safe call with let
+
+- execte a block of code ONLY IF the object is not null
+
+```
+var someObject: String? = "This is some String"
+//    someObject = null
+someObject?.let {
+    print("This will be exected ONLY IF the obejct is not null")
+}
+
+```
+
+## `?:` elvis operator
+
+```
+val immutableCar: Car = car ?: Car("Porche")
+```
+
+- The immutableCar can be either the same as the car or a Porche if the car is
+  null.
 
 ## variable type
 
@@ -227,6 +276,7 @@ class Truck constructor(private val make: String, private val model: String, pri
         println("taking the horses to the rodeo")
     }
     override fun details() {
+        super.details() // calling the parent class fun
         println("Truck made by $make in $model with towing capacity $towinCapacity")
     }
 }
